@@ -1,0 +1,12 @@
+sap.ui.jsfragment("capacity_management.selectreport", { 
+	createContent: function(oController ) {
+
+		
+		var oSelectDialog = new sap.m.SelectDialog({
+		
+		
+		
+		});
+		return oSelectDialog;
+	} 
+});

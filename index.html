@@ -1,0 +1,249 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        
+		<script src="resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.ui.commons,sap.m,sap.ui.table,sap.ui.ux3,sap.viz,sap.suite.ui.commons"
+				data-sap-ui-theme="sap_bluecrystal">
+		</script>
+		<link rel="stylesheet" type="text/css" href="CSS/style.css">
+		<!-- add sap.ui.table,sap.ui.ux3 and/or other libraries to 'data-sap-ui-libs' if required -->
+
+		<script>
+				sap.ui.localResources("capacity_management");
+				
+				var view = sap.ui.view({id:"idLogonView", viewName:"capacity_management.Logon", type:sap.ui.core.mvc.ViewType.JS});
+				//var view1 = sap.ui.view({id:"idCapacityManagementView", viewName:"capacity_management.CapacityManagementView", type:sap.ui.core.mvc.ViewType.JS});
+				//var view1 = sap.ui.view({id:"idTtypeView",viewName:"capacity_management.Ttype",type:sap.ui.core.mvc.ViewType.JS});												
+		        //var view2 = sap.ui.view({id:"idDetailInfoView",viewName:"capacity_management.DetailInfo",type:sap.ui.core.mvc.ViewType.JS});
+				
+				var app = new sap.m.App("appId",{initialPage:view});
+			    app.addPage(view);
+			    //app.placeAt("content");
+			    var shell = new sap.m.Shell("shellId",{
+			    	
+			    	app:app
+			    	
+			    });
+			    shell.placeAt("content");
+			    //view.placeAt("content");
+			    var myroutes = [{
+			    	pattern: "",
+			    	name: "LogonView",
+			    	view: "capacity_management.Logon",
+			    	viewType: sap.ui.core.mvc.ViewType.JS,
+			    	targetControl:"shellId",
+			    	clearTarget: true,
+			    	callback: function(){
+			    		myCallback(this);
+			    		
+			    	}
+			    },
+			    {
+			    	pattern: ["Ttype","Ttype"],
+			    	name: "TtypeView",
+			    	view: "capacity_management.Ttype",
+			    	viewType: sap.ui.core.mvc.ViewType.JS,
+			    	targetControl: "shellId",
+			    	clearTarget: true,
+			    	callback: function(){
+			    		myCallback(this);
+			    		
+			    	}
+			    },
+			    {
+			    	pattern: ["Capamain", "CapacityManagement"],
+			    	name: "CapacityManagement",
+			    	view: "capacity_management.CapacityManagement",
+			    	viewType: sap.ui.core.mvc.ViewType.JS,
+			    	targetControl: "shellId",
+			    	clearTarget: true,
+			    	callback: function(){
+			    		myCallback(this);
+			    	}
+			    	
+			    },
+			    {
+			    	pattern: ["Detail", "DetailInfoView"],
+			    	name: "DetailInfoView",
+			    	view: "capacity_management.DetailInfo",
+			    	viewType: sap.ui.core.mvc.ViewType.JS,
+			    	targetControl: "shellId",
+			    	clearTarget: true,
+			    	callback: function(){
+			    		myCallback(this);
+			    	}
+			    },
+			    {
+			    	pattern:["EntryCount","EntryCountView"],
+			    	name:"EntryCountView",
+			    	view:"capacity_management.EntryCount",
+			    	viewType:sap.ui.core.mvc.ViewType.JS,
+			    	targetControl:"shellId",
+			    	clearTarget:true,
+			    	callback:function(){
+			    		myCallback(this);
+			    	}
+			    },  
+				{
+			    	pattern:["Zdmmonitor","ZdmmonitorView"],
+			    	name:"ZdmmonitorView",
+			    	view:"capacity_management.Zdmmonitor",
+			    	viewType:sap.ui.core.mvc.ViewType.JS,
+			    	targetControl:"shellId",
+			    	clearTarget:true,
+			    	callback:function(){
+			    		myCallback(this);
+			    	}
+			    },
+				{
+			    	pattern:["Predictanalysis","PredictanalysisView"],
+			    	name:"PredictView",
+			    	view:"capacity_management.Predictanalysis",
+			    	viewType:sap.ui.core.mvc.ViewType.JS,
+			    	targetControl:"shellId",
+			    	clearTarget:true,
+			    	callback:function(){
+			    		myCallback(this);
+			    	}
+			    },
+				{
+			    	pattern:["CreatePrediction","CreatePredictionView"],
+			    	name:"CreatePredictionView",
+			    	view:"capacity_management.CreatePrediction",
+			    	viewType:sap.ui.core.mvc.ViewType.JS,
+			    	targetControl:"shellId",
+			    	clearTarget:true,
+			    	callback:function(){
+			    		myCallback(this);
+			    	}
+			    },
+				{
+			    	pattern:["Predictview","PredictviewView"],
+			    	name:"PredictviewView",
+			    	view:"capacity_management.Predictview",
+			    	viewType:sap.ui.core.mvc.ViewType.JS,
+			    	targetControl:"shellId",
+			    	clearTarget:true,
+			    	callback:function(){
+			    		myCallback(this);
+			    	}
+			    },
+				{
+			    	pattern:["KnowledgeBase","KnowledgeBaseView"],
+			    	name:"KnowledgeBaseView",
+			    	view:"capacity_management.KnowledgeBase",
+			    	viewType:sap.ui.core.mvc.ViewType.JS,
+			    	targetControl:"shellId",
+			    	clearTarget:true,
+			    	callback:function(){
+			    		myCallback(this);
+			    	}
+			    },
+				{
+			    	pattern:["CreateArticle","CreateArticleView"],
+			    	name:"CreateArticleView",
+			    	view:"capacity_management.CreateArticle",
+			    	viewType:sap.ui.core.mvc.ViewType.JS,
+			    	targetControl:"shellId",
+			    	clearTarget:true,
+			    	callback:function(){
+			    		myCallback(this);
+			    	}
+			    },
+				//edit by zengheng - start
+				
+				{
+			    	pattern:["Customization","CustomizationView"],
+			    	name:"CustomizationView",
+			    	view:"capacity_management.Customization",
+			    	viewType:sap.ui.core.mvc.ViewType.JS,
+			    	targetControl:"shellId",
+			    	clearTarget:true,
+			    	callback:function(){
+			    		myCallback(this);
+			    	}
+			    },
+				{
+			    	pattern:["Maintain","MaintainView"],
+			    	name:"MaintainView",
+			    	view:"capacity_management.Maintain",
+			    	viewType:sap.ui.core.mvc.ViewType.JS,
+			    	targetControl:"shellId",
+			    	clearTarget:true,
+			    	callback:function(){
+			    		myCallback(this);
+			    	}
+			    },
+				{
+			    	pattern:["Compare","CompareView"],
+			    	name:"CompareView",
+			    	view:"capacity_management.Compare",
+			    	viewType:sap.ui.core.mvc.ViewType.JS,
+			    	targetControl:"shellId",
+			    	clearTarget:true,
+			    	callback:function(){
+			    		myCallback(this);
+			    	}
+			    },
+				{
+			    	pattern:["EditObject","EditObjectView"],
+			    	name:"EditObjectView",
+			    	view:"capacity_management.EditObject",
+			    	viewType:sap.ui.core.mvc.ViewType.JS,
+			    	targetControl:"shellId",
+			    	clearTarget:true,
+			    	callback:function(){
+			    		myCallback(this);
+			    	}
+			    }
+				//edit by zengheng - end
+				
+			   
+			    ];
+			    
+			    var myCallback = function($this){
+			    	var viewId = "id"+$this.name;
+			    	var view = sap.ui.getCore().byId(viewId);
+			    	var logonModel = sap.ui.getCore().getModel();
+			    	if($this.name == "LogonView" && logonModel !== undefined && logonModel.getData().ttype !== undefined){
+			    		app.to(viewId);
+			    	}
+			    	else {
+			    		if(view){
+			    			app.removePage(view);
+				    		view.destroy();
+				    	}
+				    	view = sap.ui.view({
+				    		id: viewId,
+				    		viewName:$this.view,
+				    		type:$this.viewType
+				    	});
+				    		
+				    	app.addPage(view);  					    	
+				    	app.to(viewId);
+			    		
+			    	}
+			    		
+			    		
+			    };
+			    
+				
+			    
+			    var router = new sap.ui.core.routing.Router(myroutes);
+			    router.register("appRouter");
+			    router.initialize();
+			    
+			    
+			    
+		</script>
+
+	</head>
+	<body class="sapUiBody" role="application">
+		<div id="content"></div>
+	</body>
+</html>

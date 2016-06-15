@@ -1,0 +1,259 @@
+body{
+	background:#5F5050;
+}
+#header{
+	width: 75px;
+    height: 36px;
+    background: url(../image/sap-logo.png)  no-repeat;
+    margin-top: 2em;
+    margin-left: 1em;
+    float:left;
+	
+}
+#text-title{
+	/*line-height:0.9em;*/
+	padding-top: 1px;
+}
+#search{
+	font-size:2em;
+	margin-top:0.9em;
+	color:#fff;
+}
+#hana{
+	font-size: 0.5em;
+    font-weight: 600;
+    line-height: 1.1em;
+    color:rgb(236, 221, 223);
+	margin-left:2em;
+}
+.backBtn{
+	width:90px;
+	height:30px;
+	font-size:20px;
+	background-color:#006C83;
+	color:#FFFFFF;
+	border-radius: 12px;
+	position:absolute;
+	right:10px;
+	top:80px;
+	
+}
+.logonMatrixStyle{
+	position: absolute;
+    right: 0px;
+    top: 80px;
+}
+.sid1LabelStyle{
+	color:black;
+	font-size:15px;
+}
+.sid1FieldStyle{
+	color:black;
+	font-size:15px;
+}
+.client1LabelStyle{
+	color:black;
+	font-size:15px;
+}
+.client1FieldStyle{
+	color:black;
+	font-size:15px;
+}
+.sidLabelStyle{
+	
+    
+}
+.sidBoxStyle{
+	
+}
+.clientLabelStyle{
+	margin-top:1em;
+}
+.clientBoxStyle{
+	margin-top:1em;
+}
+
+.historyTableStyle{
+	display:inline-block;
+	margin-left:1em;
+}
+.zcommentLabelStyle{
+	margin-top:35px;
+}
+.zcommentAreaStyle{
+	margin:10px;
+	
+}
+.sapUiTf.sapUiTxtA:not(.sapUiTfInner) {
+    width:250px;
+	height:70px;
+}
+.saveBtnStyle{
+	margin-top:30px;
+	width:60px;
+	height:30px;
+}
+.formStyle{
+	height:180px;	
+	margin-top:10%;
+	margin-left:25%;
+	border-color: blue;
+    border-style: transparent;
+    border-width: thin;	
+}
+
+
+.logonBtn{
+	
+	margin-left:5em;
+	margin-top:5em;
+	
+}
+.pageStyle{
+	
+	background-size: cover;
+	background-image:url(../image/bg30.jpg);
+	background-repeat: no-repeat;
+}
+
+.tile1CSSClass{
+	
+	margin-left:7em;
+	margin-top:10px;
+	text-align:center;
+	opacity: 0.85;
+}
+.tile2CSSClass{
+	
+	margin-top:10px;
+	text-align:center;
+	opacity: 0.85;
+}
+.tile3CSSClass{
+	
+	margin-top:10px;
+	text-align:center;
+	opacity: 0.85;
+}
+.tile4CSSClass{
+	margin-left:1em;
+	margin-top:10px;
+	text-align:center;
+	opacity: 0.85;
+}
+.tile5CSSClass{
+	
+	margin-top:10px;
+	text-align:center;
+	opacity: 0.85;
+}
+.tile6CSSClass{
+	
+	margin-left:1em;
+	margin-top:10px;
+	text-align:left;
+	opacity: 0.85;
+}
+.selectLabelStyle{
+	display:block;
+	font-size:15px;
+	margin:10px;
+}
+.entryChartPanelStyle{
+	margin:10px;
+}
+.selectPanelStyle{
+	margin:10px;
+}
+.inforPanelStyle{
+	margin:10px;
+}
+.tableNameBoxStyle{
+	margin-left:10px;
+	margin-top:10px;
+	width:300px;
+}
+.lastBtnStyle{
+	margin-left:10px;
+	margin-top:10px;
+	width:120px;
+}
+.dateLabelStyle{
+	font-size:15px;
+	margin-left:10px;
+	margin-top:10px;
+}
+.sampleLabelStyle{
+	font-size:12px;
+	margin-left:10px;
+	margin-top:10px;
+}
+.dateFieldStyle{
+	
+	margin-left:10px;
+	margin-top:10px;
+}
+.refreshBtnStyle{
+	width:100px;
+	margin-top:10px;
+	margin-left:10px;
+}
+.configBtnStyle{
+	display:block;
+	width:130px;
+	margin-top:10px;
+	margin-left:10px;
+}
+.MarginAuto{
+	background-color:#dce8ee;
+	margin:auto;
+	
+}
+.ColorWhite{
+	color:white;
+	background-color:rgba(255,255,255,0.7)!important;
+	
+	
+	
+}
+.tilecontainer{
+	
+	height:300px;
+	
+}
+
+.tilePanel{
+	background-color:rgba(255,255,255,0.8) !important;
+	margin:20px;
+	
+}
+
+.headerLabelStyle{
+	color:black;
+	font-size:20px;
+	margin:60px;
+}
+
+.logonButton{
+	margin-top: 20px;
+}
+
+.toolBarBtn{
+	margin-right:20px
+}
+
+.numContentStyle{
+	text-align:center !important;
+}
+.textMargin{
+	margin-top:10px;
+	margin-botton:10px;
+	
+}
+.width100{
+	width:100px!important;
+	
+	
+}
+
+
